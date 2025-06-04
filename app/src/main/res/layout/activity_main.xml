@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <!--Halaman Utama-->
+
+    <Button
+        android:id="@+id/buttonKehilangan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="barangHilang"
+        android:text="Saya Kehilangan Barang" />
+
+    <Button
+        android:id="@+id/buttonPenemuan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="barangTemu"
+        android:text="Saya Menemukan Barang" />
+
+    <Button
+        android:id="@+id/buttonlihatHilang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="lihatHilang"
+        android:text="Lihat Laporan Barang Hilang" />
+
+    <Button
+        android:id="@+id/buttonlihatTemu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="lihatTemu"
+        android:text="Lihat Barang Ditemukan" />
+</LinearLayout>

@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "89841932318",
+    "firebase_url": "https://fir-realtime-35c95-default-rtdb.firebaseio.com",
+    "project_id": "fir-realtime-35c95",
+    "storage_bucket": "fir-realtime-35c95.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:89841932318:android:72a581429dfa36d88e760f",
+        "android_client_info": {
+          "package_name": "com.example.firebase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMewP7QeK80JMljFOwOGp2IdHpWaEHhHY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:89841932318:android:182af5b426630f538e760f",
+        "android_client_info": {
+          "package_name": "com.example.temukembali"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMewP7QeK80JMljFOwOGp2IdHpWaEHhHY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

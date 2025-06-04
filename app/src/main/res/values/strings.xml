@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">TemuKembali</string>
+    <string-array name="status">
+        <item>Ditemukan</item>
+        <item>Belum Ditemukan</item>
+    </string-array>
+</resources>

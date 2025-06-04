@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".formkehilangan">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Input Data Kehilangan" />
+
+    <EditText
+        android:id="@+id/editnamaBarangHilang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="Nama Barang" />
+
+    <EditText
+        android:id="@+id/editDeskripsiHilang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="Deskripsi" />
+
+    <EditText
+        android:id="@+id/editLokasiHilang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="Lokasi" />
+
+    <EditText
+        android:id="@+id/editTanggalHilang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Tanggal Kehilangan"
+        android:inputType="date" />
+
+    <EditText
+        android:id="@+id/editFotoHilang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="Foto Barang" />
+
+    <EditText
+        android:id="@+id/editKontakHilang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:hint="Kontak yang dapat dihubungi" />
+
+    <Spinner
+        android:id="@+id/statusHilang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/status"/>
+
+    <Button
+        android:id="@+id/addKehilangan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="addKehilangan"
+        android:text="Button" />
+</LinearLayout>

@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Nama Barang -->
+        <TextView
+            android:text="Nama Barang:"
+            android:textStyle="bold"
+            android:textColor="#555"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tvNamaBarang"
+            android:textSize="18sp"
+            android:paddingBottom="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- Deskripsi -->
+        <TextView
+            android:text="Deskripsi:"
+            android:textStyle="bold"
+            android:textColor="#555"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tvDeskripsi"
+            android:paddingBottom="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- Lokasi -->
+        <TextView
+            android:text="Lokasi:"
+            android:textStyle="bold"
+            android:textColor="#555"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tvLokasi"
+            android:paddingBottom="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- Tanggal -->
+        <TextView
+            android:text="Tanggal:"
+            android:textStyle="bold"
+            android:textColor="#555"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tvTanggal"
+            android:paddingBottom="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- Kontak -->
+        <TextView
+            android:text="Kontak:"
+            android:textStyle="bold"
+            android:textColor="#555"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tvKontak"
+            android:paddingBottom="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- Status -->
+        <TextView
+            android:text="Status:"
+            android:textStyle="bold"
+            android:textColor="#555"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tvStatus"
+            android:paddingBottom="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- Penemu -->
+        <TextView
+            android:text="Penemu:"
+            android:textStyle="bold"
+            android:textColor="#555"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tvPenemu"
+            android:text="Penemu akan ditampilkan di sini"
+            android:textStyle="italic"
+            android:paddingBottom="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- Tombol WhatsApp -->
+        <Button
+            android:id="@+id/button_whatsapp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hubungi via WhatsApp"
+            android:onClick="buttonWhatsApp"
+            android:drawableStart="@drawable/whatsapp"
+            android:padding="10dp"
+            android:layout_marginTop="16dp"
+            android:textColor="#FFFFFF" />
+
+        <!-- Tombol Konfirmasi -->
+        <Button
+            android:id="@+id/btnKonfirmasi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="buttonKonfirmasi"
+            android:text="Konfirmasi Barang Telah Diterima/Diserahkan"
+            android:layout_marginTop="16dp"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+</ScrollView>

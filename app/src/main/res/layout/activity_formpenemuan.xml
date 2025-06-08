@@ -12,53 +12,59 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Input Data Penemuan" />
+        android:hint="Input Data Penemuan" />
 
     <EditText
-        android:id="@+id/editnamaBarang"
+        android:id="@+id/editnamaBarangDitemukan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="text"
-        android:text="Nama Barang" />
+        android:hint="Nama Barang" />
 
     <EditText
-        android:id="@+id/editDeskripsi"
+        android:id="@+id/editDeskripsiDitemukan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="text"
-        android:text="Deskripsi" />
+        android:hint="Deskripsi" />
 
     <EditText
-        android:id="@+id/editLokasi"
+        android:id="@+id/editLokasiDitemukan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="text"
-        android:text="Lokasi" />
+        android:hint="Lokasi" />
 
     <EditText
-        android:id="@+id/editTanggal"
+        android:id="@+id/editTanggalDitemukan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:hint="Tanggal Penemuan"
         android:inputType="date" />
 
     <EditText
-        android:id="@+id/editFoto"
+        android:id="@+id/editKontakDitemukan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="text"
-        android:text="Foto" />
+        android:hint="Kontak yang dapat dihubungi" />
 
-    <EditText
-        android:id="@+id/editKontak"
+    <Spinner
+        android:id="@+id/statusDitemukan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="text"
-        android:text="Kontak" />
+        android:entries="@array/status"/>
+
+    <Button
+        android:id="@+id/addDitemukan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="addDitemukan"
+        android:text="Submit" />
 
 </LinearLayout>

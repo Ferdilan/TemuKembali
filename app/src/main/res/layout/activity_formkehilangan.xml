@@ -1,74 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:background="#FAFAFA"
     tools:context=".formkehilangan">
 
-    <TextView
-        android:id="@+id/textView"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Input Data Kehilangan" />
+        android:orientation="vertical"
+        android:padding="24dp">
 
-    <EditText
-        android:id="@+id/editnamaBarangHilang"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="text"
-        android:hint="Nama Barang" />
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Formulir Kehilangan"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#212121"
+            android:gravity="center"
+            android:paddingBottom="16dp" />
 
-    <EditText
-        android:id="@+id/editDeskripsiHilang"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="text"
-        android:hint="Deskripsi" />
+        <!-- Nama Barang -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nama Barang">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editnamaBarangHilang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-    <EditText
-        android:id="@+id/editLokasiHilang"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="text"
-        android:hint="Lokasi" />
+        <!-- Deskripsi -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Deskripsi Barang">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editDeskripsiHilang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-    <EditText
-        android:id="@+id/editTanggalHilang"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Tanggal Kehilangan"
-        android:inputType="date" />
+        <!-- Lokasi -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Lokasi Kehilangan">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editLokasiHilang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="text" />
+        </com.google.android.material.textfield.TextInputLayout>
 
+        <!-- Tanggal -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Tanggal Kehilangan (yyyy-mm-dd)">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTanggalHilang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="date" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-    <EditText
-        android:id="@+id/editKontakHilang"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="text"
-        android:hint="Kontak yang dapat dihubungi" />
+        <!-- Kontak -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Kontak yang dapat dihubungi">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editKontakHilang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone" />
+        </com.google.android.material.textfield.TextInputLayout>
 
-    <Spinner
-        android:id="@+id/statusHilang"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:entries="@array/status"/>
+        <!-- Status Kehilangan -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Status Kehilangan"
+            android:textSize="16sp"
+            android:paddingTop="12dp" />
 
-    <Button
-        android:id="@+id/addKehilangan"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="addKehilangan"
-        android:text="Submit" />
+        <Spinner
+            android:id="@+id/statusHilang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/status"
+            android:spinnerMode="dropdown"
+            android:paddingBottom="16dp" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
-</LinearLayout>
+        <!-- Tombol Submit -->
+        <Button
+            android:id="@+id/addKehilangan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="addKehilangan"
+            android:text="Submit"
+            android:backgroundTint="#2196F3"
+            android:textColor="#FFFFFF" />
+
+    </LinearLayout>
+</ScrollView>

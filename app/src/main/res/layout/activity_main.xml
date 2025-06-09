@@ -1,39 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:background="#F8F9FA"
+    android:id="@+id/main"
     tools:context=".MainActivity">
-    <!--Halaman Utama-->
 
-    <Button
-        android:id="@+id/buttonKehilangan"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="barangHilang"
-        android:text="Saya Kehilangan Barang" />
+        android:text="Barang Hilang dan Ditemukan"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#212121"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp" />
 
-    <Button
-        android:id="@+id/buttonPenemuan"
-        android:layout_width="match_parent"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardContainer"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:onClick="barangTemu"
-        android:text="Saya Menemukan Barang" />
+        android:layout_marginTop="24dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="24dp"
+        android:padding="24dp">
 
-    <Button
-        android:id="@+id/buttonlihatHilang"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="lihatHilang"
-        android:text="Lihat Laporan Barang Hilang" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:divider="?android:attr/dividerHorizontal"
+            android:showDividers="middle"
+            android:dividerPadding="12dp">
 
-    <Button
-        android:id="@+id/buttonlihatTemu"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:onClick="lihatTemu"
-        android:text="Lihat Barang Ditemukan" />
-</LinearLayout>
+            <!-- Button merah (filled) -->
+            <Button
+                android:id="@+id/buttonKehilangan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="barangHilang"
+                android:text="Saya Kehilangan Barang"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/bg_button_red"
+                android:layout_marginBottom="12dp"/>
+
+            <!-- Button biru (filled) -->
+            <Button
+                android:id="@+id/buttonPenemuan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="barangTemu"
+                android:text="Saya Menemukan Barang"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/bg_button_blue"
+                android:layout_marginBottom="12dp"/>
+
+            <!-- Button outline oranye -->
+            <Button
+                android:id="@+id/buttonlihatHilang"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="lihatHilang"
+                android:text="Lihat Laporan Kehilangan"
+                android:textColor="#FF5722"
+                android:background="@drawable/bg_button_outline_orange"
+                android:layout_marginBottom="12dp"/>
+
+            <!-- Button outline ungu -->
+            <Button
+                android:id="@+id/buttonlihatTemu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="lihatTemu"
+                android:text="Lihat Barang Ditemukan"
+                android:textColor="#673AB7"
+                android:background="@drawable/bg_button_outline_purple"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
